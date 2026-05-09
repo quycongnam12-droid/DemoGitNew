@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chọn Gói - FilmsArchive</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">FilmsArchive</div>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="movies.html">Danh sách phim</a>
+      <a href="./login.html">
+        <button id="login-btn">Đăng nhập</button>
+      </a>
+    </nav>
+  </header>
+
+<!-- PRICING -->
+<section class="featured">
+  <h1>Chọn gói dịch vụ phù hợp với bạn</h1>
+
+  <div class="pricing-container">
+
+    <!-- GÓI MOBILE -->
+    <div class="plan-card">
+      <h2>Di động</h2>
+      <div class="plan-image">
+        <img src="../assets/images/di động.jpg">
+      </div>
+      <p class="quality">480p</p>
+
+      <p class="price">74.000đ / tháng</p>
+
+      <ul>
+        <li>Chất lượng: Khá</li>
+        <li>Chỉ xem trên điện thoại</li>
+        <li>1 thiết bị</li>
+      </ul>
+
+      <button class="btn" onclick="addToCart('${p.id}')">Chọn gói</button>
+    </div>
+
+    <!-- GÓI BASIC -->
+    <div class="plan-card">
+      <h2>Cơ bản</h2>
+      <div class="plan-image">
+        <img src="../assets/images/cơ bản.jpg">
+      </div>
+      <p class="quality">720p</p>
+
+      <p class="price">114.000đ / tháng</p>
+
+      <ul>
+        <li>Chất lượng: Tốt</li>
+        <li>TV + Mobile + PC</li>
+        <li>1 thiết bị</li>
+      </ul>
+
+      <button class="btn" onclick="addToCart('${p.id}')">Chọn gói</button>
+    </div>
+
+    <!-- GÓI STANDARD -->
+    <div class="plan-card">
+      <h2>Tiêu chuẩn</h2>
+      <div class="plan-image">
+        <img src="../assets/images/nâng cao.png">
+      </div>
+      <p class="quality">1080p</p>
+
+      <p class="price">231.000đ / tháng</p>
+
+      <ul>
+        <li>Full HD</li>
+        <li>Xem 2 thiết bị cùng lúc</li>
+        <li>Tải xuống offline</li>
+      </ul>
+
+      <button class="btn" onclick="addToCart('${p.id}')">Chọn gói</button>
+    </div>
+
+    <!-- GÓI PREMIUM -->
+    <div class="plan-card popular">
+      <div class="badge">Phổ biến</div>
+      <h2>Cao cấp</h2>
+      <div class="plan-image">
+        <img src="../assets/images/ultramax.jpg">
+      </div>
+
+      <p class="quality">4K + HDR</p>
+
+      <p class="price">273.000đ / tháng</p>
+
+      <ul>
+        <li>Ultra HD + HDR</li>
+        <li>4 thiết bị cùng lúc</li>
+        <li>Âm thanh vòm</li>
+      </ul>
+
+      <button class="btn" onclick="addToCart('${p.id}')">Chọn gói</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 FilmArchives</p>
+  <script type="module" src="../assets/js/firebase_config.js"></script>
+  <script type="module" src="../assets/js/auth.js"></script>
+  <script type="module" src="../assets/js/products.js"></script>
+  <script type="module">
+    import { addToCart } from "../assets/js/cart.js";
+    window.addToCart = addToCart;
+    import { renderProducts } from "../assets/js/products.js";
+    renderProducts("product-list");
+  </script>
+</footer>
+
+</body>

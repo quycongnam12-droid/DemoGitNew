@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmsArchive - Xem Phim</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <div id="search-bar">
+    <input type="text" id="search-input">
+    <button id="search-btn">Search</button>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">FilmsArchive</div>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="movies.html">Danh sách phim</a>
+      <a href="./login.html">
+        <button id="login-btn">Đăng nhập</button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Movie Details Section -->
+  <section class="movie-details" id="movie-details">
+
+  </section>
+  <div class="comments">
+    <h2>Bình luận</h2>
+    <textarea placeholder="Viết cảm nghĩ của bạn..."></textarea>
+    <button>Gửi</button>
+  </div>
+
+  <footer>
+    <p>© 2025 FilmsArchive. All Rights Reserved.</p>
+    <script type="module" src="../assets/js/products.js"></script>
+    <script type="module">
+        import { renderProductDetails } from "../assets/js/products.js";
+        
+        renderProductDetails("movie-details");
+    </script>
+  </footer>
+</body>
+</html>
+

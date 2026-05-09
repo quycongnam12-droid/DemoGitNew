@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FilmArchives - Home</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <div id="search-bar">
+    <input type="text" id="search-input">
+    <button id="search-btn">Search</button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">FilmsArchive</div>
+    <nav>
+      <a href="index.html">Trang Chủ</a>
+      <a href="movies.html">Danh sách Phim</a>
+      <a href="./login.html">
+        <button id="login-btn">Đăng nhập</button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Featured Wrapper -->
+  <div id="featured">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Xem phim và các chương trình truyền hình không giới hạn và nhiều dạng nội dung khác nhau</h1>
+      <p>Đăng ký tài khoản để truy cập nhiều nội dung hơn!</p>
+      <a href="movies.html" class="btn">Xem Ngay!</a>
+    </section>
+
+    <!-- Movie List Section -->
+    <section>
+      <h2>Hiện đang Thinh Hành</h2>
+
+      <div class="movie-grid" id="product-list">
+        <!-- products.js -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FilmArchives. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="../assets/js/firebase_config.js"></script>
+  <script type="module">
+    import { renderProducts } from "../assets/js/products.js";
+    renderProducts("product-list");
+  </script>
+
+</body>
+</html>
